@@ -56,3 +56,13 @@ function storeFormData() {
   // Do something with user data
   console.log(user);
 }
+
+function processFormData(e) {
+  e.preventDefault();
+  // Validate Form
+  validateForm();
+  // Submit Form if Valid
+  if (isValid && passwordsMatch) {
+    storeFormData();
+  }
+}
